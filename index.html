@@ -8,6 +8,16 @@
       body {
         background-image: linear-gradient(to right, #fecdd3, #4627da);
         font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
       }
 
       .title {
@@ -46,11 +56,126 @@
 
       .right {
         background-image: url(img/wf.png);
-        background-size: cover;
-        min-width: 100%;
-        height: 630px;
+        background-position-y: bottom;
+        background-size: 650px;
+        background-repeat: no-repeat;
       }
 
+      .info {
+        grid-column: 1 / 3;
+        margin-bottom: 2rem;
+        padding: 3rem;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        border-bottom-right-radius: 225px 15px;
+        border-bottom-left-radius: 15px 255px;
+        border: solid 3px #f892eb;
+        border-width: 6px;
+        background-color: #ff7fec82;
+        margin-left: 3rem;
+        margin-right: 3rem;
+      }
+
+      .info h2 {
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 5rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+      }
+
+      .info p {
+        font-family: 'Open Sans';
+        font-weight: 500;
+        font-size: 1.5em;
+        color: #ffffff;
+      }
+
+      .button {
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        border-bottom-right-radius: 225px 15px;
+        border-bottom-left-radius: 15px 255px;
+        border: solid 3px #f892eb;
+        border-width: 6px;
+        background-color: #ffd5f382;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        font-family: 'Amatic SC';
+        font-size: 3rem;
+        margin: auto;
+        margin-top: 4rem;
+        transition: all .2s ease-in-out;
+      }
+
+      .buttons {
+        display: flex;
+      }
+
+      .button:hover {
+        transform: scale(1.05); 
+      }
+
+      .astronaute {
+        background-image: url("img/astro.png");
+        background-size: cover;
+        height: 430px;
+      }
+
+      .twitter {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        grid-column: 1 / 3;
+        margin-bottom: 40px;
+      }
+
+      .twitter a {
+        text-decoration: none;
+        
+        font-family: 'Amatic SC', cursive;
+        font-size: 3rem;
+        white-space: nowrap;
+        background: linear-gradient(78.25deg,#7000e9,#ff00c5 20.93%,#ff0076 46.94%,#7300e3 92.49%);
+        background-clip: text;
+        transition: all .2s ease-in-out;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .twitter a:hover {
+        transform: scale(1.05); 
+      }
+
+      .twitter::before {
+        content: "";
+        background-image: url(img/twitter.png);
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        background-size: contain;
+      }
+
+      footer {
+        grid-column: 1 / 3;
+        text-align: center;
+        font-family: 'Amatic SC', cursive;
+        color: white;
+        font-size: 2rem;
+        height: 86px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .token {
+        height: 120px;
+      }
+
+      /* Star background */
       #stars {
         width: 1px;
         height: 1px;
@@ -114,71 +239,19 @@
         }
       }
 
-      .info {
-        grid-column: 1 / 3;
-        margin-bottom: 2rem;
-        padding: 3rem;
-        border-top-left-radius: 255px 15px;
-        border-top-right-radius: 15px 225px;
-        border-bottom-right-radius: 225px 15px;
-        border-bottom-left-radius: 15px 255px;
-        border: solid 3px #f892eb;
-        border-width: 6px;
-        background-color: #ff7fec82;
-        margin-left: 3rem;
-        margin-right: 3rem;
-      }
-
-      .info h2 {
-        font-family: 'Amatic SC', cursive;
-        color: white;
-        font-size: 5rem;
-        margin-top: 0;
-        margin-bottom: 2rem;
-      }
-
-      .info p {
-        font-family: 'Open Sans';
-        font-weight: 500;
-        font-size: 1.5em;
-        color: #ffffff;
-      }
-
-      .button {
-        border-top-left-radius: 255px 15px;
-        border-top-right-radius: 15px 225px;
-        border-bottom-right-radius: 225px 15px;
-        border-bottom-left-radius: 15px 255px;
-        border: solid 3px #f892eb;
-        border-width: 6px;
-        background-color: #ffd5f382;
-        display: inline-block;
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        font-family: 'Amatic SC';
-        font-size: 3rem;
-        margin: auto;
-        margin-top: 4rem;
-      }
-
-      .astronaute {
-        background-image: url("img/astro.png");
-        background-size: cover;
-        height: 530px;
-      }
 
     </style>
   </head>
 
   <body>
     <div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
     <div class="wrapper">
+
       <div class="left">
         <h1 class="title">
-          <img src="img/token.png" height="120" />
+          <img class="token" src="img/token.png"/>
           WaifuCoin
         </h1>
         <p class="intro">
@@ -188,10 +261,12 @@
           What's the point of doge if no waifu ? 
         </p>
         <p class="intro">Join the vibrant community and build you a Harem to go along with your DOGE!</p>
+        <div class="buttons">
           <a class="button" href="#buy">How to Buy</a>
-          <input class="button" type="button" value="Read Waifupaper v1" >
-        
+          <a class="button" href="#">Read Waifupaper v1</a>
+        </div>
       </div>
+
       <div class="right"></div>
 
       <div class="info" > 
@@ -204,21 +279,31 @@
 
       <div class="astronaute" ></div>
 
-      <div class="info" style="margin-top: -150px;" > 
+      <div class="info" style="margin-top: -10px;" > 
         <h2>Our core values</h2>
         <p>
-         The hodlers and believers of the WaifuCoin have been the source of all our success, that's why we plan to start the Waifu Rescue Association, to seamlessly start collecting donations by using Amazon Smile and collecting a percentage of your purchases. 
+         The hodlers and believers of the WaifuCoin have been the source of all our success, that's why we plan to start the Waifu Rescue Association, to seamlessly start collecting donations by using Amazon Smile and collecting a percentage of your purchases.
+        </p>
+        <p> 
          Joining our cause is easy and it's free, our community is actively searching for opportunities to help women in the real world.
         </p>
       </div>
+
+      <div class="twitter" > <a href="https://twitter.com/nakedmoto">Follow us on twitter @nakedmoto</a></div>
       
       <div id="buy" class="info" > 
         <h2>How to Buy</h2>
         <p>
-         The hodlers and believers of the WaifuCoin have been the source of all our success, that's why we plan to start the Waifu Rescue Association, to seamlessly start collecting donations by using Amazon Smile and collecting a percentage of your purchases. 
+         The hodlers and believers of the WaifuCoin have been the source of all our success, that's why we plan to start the Waifu Rescue Association, to seamlessly start collecting donations by using Amazon Smile and collecting a percentage of your purchases.
+        </p>
+        <p>
          Joining our cause is easy and it's free, our community is actively searching for opportunities to help women in the real world.
         </p>
       </div>
+
+      <footer>
+        © 2021 - The waifu team - <a href="https://twitter.com/nakedmoto">Follow us on twitter</a>
+      </footer>
 
     </div>
   </body>
